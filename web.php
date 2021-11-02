@@ -5,6 +5,7 @@ use App\Http\Controllers\FormbukuController;
 use App\Http\Controllers\ListController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\BukuController;
+use App\Http\Controllers\GuruController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +45,11 @@ route::get('/databarang', function() {
 route::get('/databarang',
     [BarangController::class, 'data_barang']);
 
-//tugas  pertemuan 7
+//source code 2
+Route::get('/formulir', [GuruController::class, 'formulir']);
+Route::post('/formulir/proses', [GuruController::class, 'formulir_proses']);
+
+
+//tugas pertemuan 6
 Route::get('/pesan', [BukuController::class, 'pesan']);
-Route::post('/pesan/proses', [BukuController::class, 'nota']);
+Route::post('/pesan/proses', [BukuController::class, 'nota']); 
